@@ -49,9 +49,13 @@ label {
 }
 
 #error-message {
-  color: red;
+  color: #dc3545;
   margin-top: 10px;
   display: none;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: var(--bg-secondary, #fff);
+  border: 1px solid #dc3545;
 }
 
 #next-track-timer{
@@ -75,7 +79,7 @@ label {
 .button-55 {
   font-family: 'Jester', sans-serif;
   align-self: center;
-  background-color: #fff;
+  background-color: var(--button-bg, #fff);
   background-image: none;
   background-position: 0 90%;
   background-repeat: repeat no-repeat;
@@ -83,9 +87,10 @@ label {
   border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
   border-style: solid;
   border-width: 2px;
+  border-color: var(--border-color, #ccc);
   box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
   box-sizing: border-box;
-  color: #41403e;
+  color: var(--text-primary, #41403e);
   cursor: pointer;
   display: inline-block;
   font-size: 1rem;
@@ -107,8 +112,18 @@ label {
 .button-55:hover {
   box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
   transform: translate3d(0, 2px, 0);
+  background-color: var(--button-hover, #f0f0f0);
+  border-color: var(--accent-color, #2497e3);
 }
 
 .button-55:focus {
   box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
+  outline: 2px solid var(--accent-color, #2497e3);
+}
+
+.button-55:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background-color: var(--button-bg, #fff);
+  color: var(--text-secondary, #999);
 }

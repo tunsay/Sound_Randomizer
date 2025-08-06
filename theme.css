@@ -1,0 +1,191 @@
+/* Variables pour le thème sombre (par défaut) */
+:root {
+  --bg-primary: #1a1a1a;
+  --bg-secondary: #2d2d2d;
+  --text-primary: #ffffff;
+  --text-secondary: #b3b3b3;
+  --border-color: #404040;
+  --button-bg: #3a3a3a;
+  --button-hover: #4a4a4a;
+  --accent-color: #2497e3;
+  --input-bg: #2d2d2d;
+  --input-border: #555555;
+  --table-bg: #2d2d2d;
+  --table-border: #404040;
+  --progress-bg: #3a3a3a;
+  --progress-fill: #2497e3;
+}
+
+/* Variables pour le thème clair */
+[data-theme="light"] {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8f9fa;
+  --text-primary: #212529;
+  --text-secondary: #6c757d;
+  --border-color: #dee2e6;
+  --button-bg: #f8f9fa;
+  --button-hover: #e9ecef;
+  --accent-color: #0d6efd;
+  --input-bg: #ffffff;
+  --input-border: #ced4da;
+  --table-bg: #ffffff;
+  --table-border: #dee2e6;
+  --progress-bg: #e9ecef;
+  --progress-fill: #0d6efd;
+}
+
+/* Bouton de basculement de thème */
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: var(--button-bg);
+  border: 2px solid var(--border-color);
+  border-radius: 25px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-primary);
+  font-family: 'Jester', sans-serif;
+  font-size: 14px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.theme-toggle:hover {
+  background: var(--button-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.theme-icon {
+  font-size: 16px;
+  transition: transform 0.3s ease;
+}
+
+.theme-toggle:hover .theme-icon {
+  transform: scale(1.2) rotate(180deg);
+}
+
+/* Application du thème aux éléments existants */
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+section {
+  background-color: var(--bg-secondary);
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--border-color);
+}
+
+h1 {
+  color: var(--text-primary);
+}
+
+label {
+  color: var(--text-primary);
+}
+
+#rule-before {
+  color: var(--text-secondary);
+}
+
+/* Styles pour les inputs */
+input[type="number"], input[type="range"] {
+  background-color: var(--input-bg);
+  color: var(--text-primary);
+  border: 1px solid var(--input-border);
+  border-radius: 5px;
+  padding: 5px;
+}
+
+input[type="number"]:focus, input[type="range"]:focus {
+  outline: 2px solid var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+/* Styles pour les boutons existants */
+.button-55 {
+  background-color: var(--button-bg);
+  color: var(--text-primary);
+  border: 2px solid var(--border-color);
+  transition: all 0.3s ease;
+}
+
+.button-55:hover:not(:disabled) {
+  background-color: var(--button-hover);
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+}
+
+.button-55:disabled {
+  opacity: 0.5;
+  background-color: var(--button-bg);
+  color: var(--text-secondary);
+  border-color: var(--border-color);
+}
+
+/* Styles pour le tableau */
+#track-table {
+  background-color: var(--table-bg);
+  border: 1px solid var(--table-border);
+  color: var(--text-primary);
+}
+
+#track-table th, #track-table td {
+  border-bottom: 1px solid var(--table-border);
+  color: var(--text-primary);
+}
+
+#track-table tr:nth-child(even) {
+  background-color: var(--bg-secondary);
+}
+
+/* Styles pour la barre de progression */
+#progress-bar {
+  background-color: var(--progress-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+}
+
+#progress-bar::-webkit-progress-bar {
+  background-color: var(--progress-bg);
+  border-radius: 5px;
+}
+
+#progress-bar::-webkit-progress-value {
+  background-color: var(--progress-fill);
+  border-radius: 5px;
+}
+
+#progress-bar::-moz-progress-bar {
+  background-color: var(--progress-fill);
+  border-radius: 5px;
+}
+
+/* Styles pour les messages */
+#current-track {
+  color: var(--text-primary);
+  background-color: var(--bg-secondary);
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid var(--border-color);
+}
+
+#error-message {
+  color: #dc3545;
+}
+
+#next-track-timer, #next-track-timer2 {
+  color: var(--text-secondary);
+  background-color: var(--bg-secondary);
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid var(--border-color);
+}
