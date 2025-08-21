@@ -127,3 +127,21 @@ label {
   background-color: var(--button-bg, #fff);
   color: var(--text-secondary, #999);
 }
+
+/* Styles des inputs supprimés: retour au style natif du navigateur */
+
+/* Animation au chargement */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+input[type="range"] {
+  animation: slideIn 0.6s ease-out;
+}

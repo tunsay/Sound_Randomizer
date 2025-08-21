@@ -28,11 +28,19 @@ let duration = 0;
 
 // Définir le volume initial
 gainNode.gain.value = elements.volumeControl.value;
+updateVolumeProgress(elements.volumeControl.value);
 
 // Mettre à jour le volume en fonction de la valeur de l'entrée
 elements.volumeControl.addEventListener('input', () => {
     gainNode.gain.value = elements.volumeControl.value;
+    updateVolumeProgress(elements.volumeControl.value);
 });
+
+// Fonction pour mettre à jour la barre de progression du volume
+function updateVolumeProgress(volume) {
+    const percentage = (volume * 100);
+    elements.volumeControl.style.setProperty('--volume-progress', `${percentage}%`);
+}
 
 // Gérer le clic sur le bouton de sélection de dossier
 elements.chooseFolderButton.addEventListener('click', async () => {

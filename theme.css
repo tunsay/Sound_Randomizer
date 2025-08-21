@@ -96,19 +96,7 @@ label {
   color: var(--text-secondary);
 }
 
-/* Styles pour les inputs */
-input[type="number"], input[type="range"] {
-  background-color: var(--input-bg);
-  color: var(--text-primary);
-  border: 1px solid var(--input-border);
-  border-radius: 5px;
-  padding: 5px;
-}
-
-input[type="number"]:focus, input[type="range"]:focus {
-  outline: 2px solid var(--accent-color);
-  border-color: var(--accent-color);
-}
+/* Styles pour les inputs supprimés: retour au style natif */
 
 /* Styles pour les boutons existants */
 .button-55 {
@@ -133,18 +121,11 @@ input[type="number"]:focus, input[type="range"]:focus {
 
 /* Styles pour le tableau */
 #track-table {
-  background-color: var(--table-bg);
-  border: 1px solid var(--table-border);
   color: var(--text-primary);
 }
 
 #track-table th, #track-table td {
-  border-bottom: 1px solid var(--table-border);
   color: var(--text-primary);
-}
-
-#track-table tr:nth-child(even) {
-  background-color: var(--bg-secondary);
 }
 
 /* Styles pour la barre de progression */
@@ -180,12 +161,4 @@ input[type="number"]:focus, input[type="range"]:focus {
 
 #error-message {
   color: #dc3545;
-}
-
-#next-track-timer, #next-track-timer2 {
-  color: var(--text-secondary);
-  background-color: var(--bg-secondary);
-  padding: 8px;
-  border-radius: 5px;
-  border: 1px solid var(--border-color);
 }
